@@ -1,0 +1,197 @@
+:root {
+    --discord-color-one: #23272a;
+    --discord-color-two: #2c2f33;
+    --discord-color-three: #99aab5;
+    --discord-color-four: #ffffff;
+    --discord-color-five: #7289da;
+
+    --coding-theme-1: #00ae6b;
+    --coding-theme-2: #f2283c;
+    --coding-theme-3: #277dff;
+    --coding-theme-4: #ffcf31;
+    --coding-theme-5: #d72e82;
+    --coding-theme-6: #875afb;
+    --coding-theme-7: #ff7a00;
+}
+
+.start-sec {
+    margin-top: 4rem;
+    height: 780px; width: 100%;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+}
+
+.start-sec h1 {
+    font-size: 72px;
+    font-family: Poppins,'sans-serif';
+}
+.start-sec p {
+    font-size: 48px;
+    font-family: Poppins,'sans-serif';
+    font-weight: 500;
+}
+/*--------overview-------*/
+
+.overview-heading,
+.tutorial-heading {
+    margin-top: 3rem;
+    margin-left: 4.5rem;
+
+    padding: 1rem 1rem;
+
+    font-size: 48px;
+}
+.overview-detail {
+    margin-left: 9rem;
+    font-size: 24px;
+    font-family: Poppins, 'sans-serif';
+}
+
+/*------table------*/
+.table-section {
+    display: grid;
+    justify-content: center;
+}
+
+.tutorial-table {
+    border-collapse: collapse;
+    max-width: 100%;
+    text-align: left;
+}
+
+.tutorial-table-top {
+    border: 1px solid #dddddd;
+    font-weight: 700;
+    padding: 17px 12px;
+    font-size: 22px;
+}
+
+.tutorial-table-detail th {
+    border: 2px solid #dddddd;
+    padding: 17px 12px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background-color: var(--discord-color-five);
+}
+
+/*-------example-----*/
+.example-heading {
+    margin-top: 3rem;
+    margin-left: 4.5rem;
+
+    padding: 1rem 1rem;
+
+    font-size: 48px;    
+}
+
+.example-image {
+    display: grid;
+    justify-content: center;
+}
+
+.image-1 {
+    margin-bottom: 1.7rem;
+}
+/*-----code-----*/
+
+.coding {
+    margin-bottom: 5rem;
+}
+
+.coding-heading {
+    margin-top: 3rem;
+    margin-left: 4.5rem;
+
+    padding: 1rem 1rem;
+
+    font-size: 48px;       
+}
+
+.code-box {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50px 1fr;
+
+}
+
+.code-box-top {
+    display: grid;
+    align-items: center;
+}
+
+.file-name {
+    margin-left: 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.code-box-top {
+    border:1px solid #ccc;
+    border-radius: 30px 30px 0 0;
+}
+
+.pre-code {
+    height:400px;
+    width:800px;
+
+    border:1px solid #ccc;
+    background-color: #13131a;
+
+    padding: 3rem 6rem;
+
+    overflow:auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #13131a; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--discord-color-five); 
+    box-shadow: 1px 1px 200px 0px rgba(92,32,231,1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.pre-code pre {
+    font-family: 'Source Code Pro', monospace;
+    color: #e2e3e4;
+}
+
+/*------code-theme-------*/
+.theme-one,
+.theme-two,
+.theme-three,
+.theme-four,
+.theme-five,
+.theme-six,
+.theme-seven {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.theme-one {color: var(--coding-theme-1);}
+.theme-two {color: var(--coding-theme-2);}
+.theme-three {color: var(--coding-theme-3);}
+.theme-four {color: var(--coding-theme-4);}
+.theme-five {color: var(--coding-theme-5);}
+.theme-six {color: var(--coding-theme-6);}
+.theme-seven {color: var(--coding-theme-7);}

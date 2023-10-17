@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="#">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="src/image/slime-logo.svg">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <a href="index.html" class="logo-text">Portfolio</a>
+        </div>
+        <div class="right-section">
+            <div class="navbar">
+                <a href="#home" class="home">Home</a>
+                <a href="#about" class="about">About</a>
+                <a href="#soft-skill" class="skill">Skill</a>
+                <a href="#project" class="project">Project</a>
+            </div>
+        </div>
+    </header>
+    <section id="home" class="home">
+        <div class="home-grid">
+            <div class="home-left-section">
+                <div class="home-left-text-box">
+                    <h1 class="home-head-text">Hello</h1>
+                    <h2 class="home-name-text">My name is <span class="home-name-type" id="home-type"></span></h2>
+                    <ul class="contact">
+                        <a href="https://github.com/KongChaba" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.instagram.com/kgchb__/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.facebook.com/pongsapuk.chaba" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="home-right-section">
+                <div class="home-right-image">
+                    <img src="src/image/chaba-img.png"" class="home-img" id="right-zone">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="detail-1" class="detail-1">
+        <div class="detail-1-grid">
+            <div class="detail-1-left-section">
+                <h2 id="left-zone">from</h2>
+            </div>
+            <div class="detail-1-right-section">
+                <h2 id="right-zone">Princess Chulabhorn Science High School Pathum Thani</h2>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h1 class="about-heading" id="left-zone">About</h1>
+        <div class="about-content">
+            <div class="about-content-grid">
+                <div class="about-content-left-section" id="left-zone">
+                    <p><span class="about-content-head">Name</span> : Pongsapak Chaba</p>
+                    <p><span class="about-content-head">Nickname</span> : Kong</p>
+                    <p><span class="about-content-head">Birthday</span> : 8 Dec 2005</p>
+                    <p><span class="about-content-head">Age</span> : 17 years old</p>
+                    <p class="contact-content"><span class="about-content-head">Contact</span> :</p>
+                    <p class="home-contact"><i class='bx bxs-home' ></i> : 66 Soi Phetkasem 48, Intersection 16/1, Bang Duan, Phasi Charoen District, Bangkok 10160 Thailand</p>
+                    <p class="gmail-contact"><i class='bx bxl-gmail'></i> : Chabachaboochabee@gmail.com</p>         
+                </div>
+                <div class="about-content-right-section">
+                    <img src="src/image/chaba-img(2).png" alt="" class="home-img" id="right-zone">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="soft-skill" class="soft-skill">
+        <h1 class="soft-skill-heading" id="bottom-zone">Soft Skills</h1>
+        <div id="bottom-zone"><canvas id="soft-skill-chart" style="width:100%; max-width: 80%;"></canvas></div>
+    </section>
+    <section id="skill" class="skill">
+        <h1 class="skill-heading" id="bottom-zone">Skills</h1>
+        <div class="skill-language-grid">
+            <div class="skill-language-1">
+                <div class="language-card" id="box1-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/python-5.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Python</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box2-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/c-1.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>C</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box2-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/Pandas_mark.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Pandas</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-language-2">
+                <div class="language-card" id="box5-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/html-1.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>HTML</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box5-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/java-4.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Java</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card"id="box3-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/scikit-learn-seeklogo.com.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Scikit learn</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-language-3">
+                <div class="language-card" id="box4-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/css-3.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>CSS</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box6-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/matplotlib-seeklogo.com.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Matplotlib</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-language-4">
+                <div class="language-card" id="box3-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/logo-javascript.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Javascript</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star-half check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box3-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/numpy-1.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Numpy</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tool" class="tool">
+        <h1 class="tool-heading" id="bottom-zone">Tool</h1>
+        <div class="tool-grid">
+            <div class="tool-1">
+                <div class="language-card" id="box6-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/pycharm-icon.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Pycharm</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="language-card" id="box3-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/intellij-idea-1.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>IntelliJ</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-2">
+                <div class="language-card" id="box4-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/visual-studio-code-1.svg" alt="" class="card-img ">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Visual Studio Code</h4>
+                        <p class="star-rating">
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star check-rating'></i>
+                            <i class='bx bxs-star'></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-3"><div class="language-card" id="box5-zone">
+                <div class="language-card-top">
+                    <img src="src/image/figma-seeklogo.com.svg" alt="" class="card-img">
+                </div>
+                <div class="language-card-text">
+                    <h4>Figma</h4>
+                    <p class="star-rating">
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star'></i>
+                    </p>
+                </div>
+            </div></div>
+            <div class="tool-4"><div class="language-card" id="box1-zone">
+                <div class="language-card-top">
+                    <img src="src/image/framer-icon.svg" alt="" class="card-img">
+                </div>
+                <div class="language-card-text">
+                    <h4>Framer</h4>
+                    <p class="star-rating">
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star check-rating'></i>
+                        <i class='bx bxs-star'></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="project">
+        <h1 class="skill-heading">Project</h1>
+        <div class="project-grid">
+            <div class="project-1">
+                <div class="language-card" id="box1-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/discord-icon-svgrepo-com.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Discord Bot</h4>
+                        <a href="/discord-bot.html">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-2">
+                <div class="language-card" id="box2-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/rowan_berry-removebg-preview.png" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Minecraft Mod</h4>
+                        <a href="/minecraft-mod.html">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-3">
+                <div class="language-card" id="box3-zone">
+                    <div class="language-card-top">
+                        <img src="src/image/figma-seeklogo.com.svg" alt="" class="card-img">
+                    </div>
+                    <div class="language-card-text">
+                        <h4>Web Design</h4>
+                        <a href="/figma-design.html">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="left-side">
+            <h1>@Copyright Pongsapak, 2023.All right reserved.</h1>
+        </div>
+        <div class="right-side">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!--script-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="src/javascript/index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#home-type', {
+            strings: ['Kong', 'Chaba','Pongsapak Chaba'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

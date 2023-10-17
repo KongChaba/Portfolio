@@ -1,0 +1,137 @@
+/*---------start-----------*/
+
+.image-start {
+    height: 723px;
+    width: 100%;
+
+    margin-top: 4rem;
+
+    background-image: url(/src/image/minecraft.png);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading-mod {
+    font-size: 84px;
+    text-shadow: 8px 8px 1px rgb(228, 228, 228, 0.5);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*-------------des---------------*/
+
+.describtion {
+    margin-bottom: 3rem;
+}
+
+.des-head {
+    padding: 3rem 0 0 6rem;
+    font-size: 53px;
+    font-weight: 400;
+}
+.author-head {
+    margin-left: 6rem;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.des-des {
+    margin-top: 3rem;
+    margin-left: 6rem;
+    margin-bottom: 3rem;
+    padding-right: 4rem;
+
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.right-des {
+    padding-top: 5rem;
+    padding-left: 4rem;
+    background-color: #d4d4d4;
+}
+
+.des-list ul li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.des-but {
+    margin-left: 6rem;
+    padding: 1rem 2rem;
+
+    background-color: #d4d4d4;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/*------how-to-download------*/
+
+.how-to-download {
+    margin-bottom: 4rem;
+}
+
+.download-heading {
+    padding: 3rem 0 0 6rem;
+    font-size: 53px;
+    font-weight: 400;
+}
+
+.dl-ul {
+    margin-top: 1rem;
+    margin-left: 10rem;
+
+    font-size: 20px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.li-ul ol li {
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+
+.image-frame {
+    display: grid;
+    justify-content: center;
+}
+
+.li-ul {
+    margin-top: 2rem;
+}
+
+.img-1 {
+    display: flex;
+    height: 300px;
+    margin-top: 2rem;
+}
+
+.image-frame-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-image {
+    height: 300px;
+}
+.add-image-2 {
+    width: 400px;
+}
+
+.click-dow {
+    margin-top: 1rem;
+    margin-left: 4rem;
+}

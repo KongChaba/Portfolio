@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Thai+Looped:wght@100;300;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --black-: #000;
+    --black-one-: #27282C;
+
+    --white-: #fff;
+    --cream-: #F9F4ED;
+
+    --purple-: #C27FF9;
+    --purple-three-: #470f74;
+
+    --cu-pink-: #DE5C8E;
+    --cu-yellow-: #FFD100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--black-);
+}
+
+html {
+    background-color: var(--cream-);
+    scroll-behavior: smooth;
+}
+
+/*----------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4rem;
+
+    background-color: rgba(0,0,0,0)!important; 
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+
+    z-index: 100;
+}
+
+.left-section {
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 2rem   ;
+}
+
+.left-section a {
+    color: var(--black-);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+}
+
+.right-section {
+    text-align: center;
+}
+
+.navbar {
+    margin-top: 18px;
+    margin-right: 2rem;
+}
+
+.navbar a {
+    color: var(--black-);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+
+    padding: 1rem 1.5rem;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: #C27FF9;
+    text-shadow: 3px 2px var(--purple-three-);
+    pointer-events: fill;
+    transition: 0.5s
+}
+
+* {
+    cursor: url("/src/image/slime-cursor.svg"), auto;
+}

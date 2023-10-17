@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/discord-bot.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="src/image/slime-logo.svg">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <a href="index.html" class="logo-text">Portfolio</a>
+        </div>
+        <div class="right-section">
+
+        </div>
+    </header>
+    <section class="start-sec">
+        <img src="src/image/discord-icon-svgrepo-com.svg" alt="" style="height: 200px; ">
+        <h1>My Discord Bot</h1>
+        <p>"Applesss"</p>
+    </section>
+    <section class="overview">
+        <h1 class="overview-heading">Overview</h1>
+        <p class="overview-detail">
+            This bot is meant to play around in your chat for your entertainment.
+        </p>
+    </section>
+    <section class="tutorial">
+        <h1 class="tutorial-heading">Tutorial</h1>
+        <div class="table-section">
+            <table class="tutorial-table">
+                <tr>
+                    <th class="tutorial-table-top">Input</th>
+                    <th class="tutorial-table-top">Output</th>
+                </tr>
+                <tr class="tutorial-table-detail">
+                    <th>!help</th>
+                    <th>Browse command</th>
+                </tr>
+                <tr class="tutorial-table-detail">
+                    <th>!inspire</th>
+                    <th>Send a message of encouragement</th>
+                </tr>
+                <tr class="tutorial-table-detail">
+                    <th>!food</th>
+                    <th>Random food menu (used when you don't know what to eat)</th>
+                </tr>
+                <tr class="tutorial-table-detail">
+                    <th>!dog</th>
+                    <th>Random pictures of cute dogs</th>
+                </tr>
+            </table>            
+        </div>
+    </section>
+    <section class="example">
+        <h1 class="example-heading">Example</h1>
+        <div class="example-image">
+        <img src="src/image/Screenshot 2023-09-24 224125.png" alt="" class="image-1">
+        <img src="src/image/Screenshot 2023-09-24 224141.png" alt="" class="image-1">
+        </div>
+    </section>
+    <section class="coding">
+        <h1 class="coding-heading">Example Code</h1>
+        <div class="code-box">
+            <div class="code-box-top">
+                <p class="file-name">discord.py</p>
+            </div>
+            <div class="pre-code">
+                <pre>
+<span class="theme-two">import</span> <span class="theme-six">discord</span>
+<span class="theme-two">from</span> <span class="theme-six">discord.ext</span> <span class="theme-two">import</span> <span class="theme-six">commands</span>
+<span class="theme-two">from</span> <span class="theme-six">datetime</span> <span class="theme-two">import</span> <span class="theme-six">datetime, timedelta</span>
+
+<span class="theme-two">import</span> <span class="theme-six">os</span>
+<span class="theme-two">import</span> <span class="theme-six">requests</span>
+<span class="theme-two">import</span> <span class="theme-six">json</span>
+<span class="theme-two">import</span> <span class="theme-six">random</span>
+
+#----------------------------------------------------------------
+sad_words <span class="theme-two">=</span> <span class="theme-three">["sad", "depressed", "unhappy", "angry", "miserable", "depressing"]</span>
+
+starter_encouragements <span class="theme-two">=</span> <span class="theme-three">[
+    "Cheer up !!!",
+    "Hang in there.",
+    "You are a great person / bot!!",
+    "Be strong.",
+    "Look on the bright side.",
+    "Every cloud has a silver lining.",
+    "Don’t give up.",
+    "It’s gonna be ok.",
+    "You’ll get through this.",
+]</span>
+
+good_words <span class="theme-two">=</span> <span class="theme-four">["WIN", "win", "the first", "congratulation","Good news"]</span>
+happy_encouragements <span class="theme-two">=</span> [
+"",
+]</span>
+#----------------------------------------------------------------
+url <span class="theme-two">=</span> <span class="theme-four">"https://covid-19-data.p.rapidapi.com/country/code"</span>
+
+querystring <span class="theme-two">=</span> <span class="theme-three">{"code"</span>:<span class="theme-three">"it"}</span>
+
+headers <span class="theme-two">=</span> <span class="theme-three">{</span>
+    <span class="theme-four">'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+    'x-rapidapi-key': "c001cf2a86mshe074dc30b498870p1b9eddjsnd638704771d9"</span>
+    <span class="theme-three">}</span>
+#----------------------------------------------------------------
+url2 <span class="theme-two">=</span> <span class="theme-four">"https://google-news1.p.rapidapi.com/top-headlines"</span>
+
+querystring2 <span class="theme-two">=</span> <span class="theme-three">{"country"</span>:<span class="theme-three">"US","lang"</span>:<span class="theme-three">"en","limit"</span>:<span class="theme-three">"50"}</span>
+
+headers2 <span class="theme-two">=</span> {
+    <span class="theme-three">'x-rapidapi-host'</span>: <span class="theme-four">"google-news1.p.rapidapi.com",</span>
+    <span class="theme-three">'x-rapidapi-key'</span>: <span class="theme-four">"c001cf2a86mshe074dc30b498870p1b9eddjsnd638704771d9"</span>
+    }
+
+response <span class="theme-two">=</span> <span class="theme-six">requests</span>.<span class="theme-six">request</span><span class="theme-three">("GET", url2, headers=headers2, params=querystring2)</span>
+
+#----------------------------------------------------------------
+<span class="theme-two">def</span> <span class="theme-six">get_quote</span><span class="theme-three">()</span>:
+    response <span class="theme-two">=</span> <span class="theme-six">requests</span>.<span class="theme-six">get</span><span class="theme-three">("https://zenquotes.io/api/random")</span>
+    json_data <span class="theme-two">=</span> <span class="theme-six">json</span>.<span class="theme-six">loads</span><span class="theme-three">(response.text)</span>
+    quote <span class="theme-two">=</span> <span class="theme-seven">json_data</span><span class="theme-three">[0]['q']</span> <span class="theme-two">+</span> <span class="theme-three">"-"</span> <span class="theme-two">+</span> <span class="theme-seven">json_data</span><span class="theme-three">[0]['a']</span>
+    <span class="theme-two">return</span> quote
+
+<span class="theme-two">def</span> <span class="theme-six">get_dog</span><span class="theme-three">()</span>:
+    response <span class="theme-two">=</span> <span class="theme-six">requests</span>.<span class="theme-six">get</span><span class="theme-three">(</span><span class="theme-four">"https://dog.ceo/api/breeds/image/random"</span><span class="theme-three">)</span>
+    image_link <span class="theme-two">=</span> <span class="theme-six">response</span>.<span class="theme-six">json</span><span class="theme-three">()["message"]</span>
+    <span class="theme-two">return</span> image_link
+
+<span class="theme-two">def</span> <span class="theme-six">news_covid</span><span class="theme-three">()</span>:
+    response <span class="theme-two">=</span> <span class="theme-six">requests</span>.<span class="theme-six">request</span><span class="theme-three">("GET", url, headers=headers, params=querystring)</span>
+    covid_text <span class="theme-two">=</span> <span class="theme-three">(response.text)</span>
+    <span class="theme-two">return</span> covid_text
+
+#----------------------------------------------------------------
+#wrapper / decorator
+
+message_lastseen <span class="theme-two">=</span> <span class="theme-six">datetime</span>.<span class="theme-six">now</span><span class="theme-three">()</span>
+messa</span>ge2_lastseen <span class="theme-two">=</span> <span class="theme-six">datetime</span>.<span class="theme-six">now</span><span class="theme-three">()</span>
+
+bot </span><span class="theme-two">=</span> <span class="theme-six">commands</span>.<span class="theme-six">Bot</span><span class="theme-three">(command_prefix='!',help_command=None)</span>
+
+<span class="theme-one">@bot.event</span>
+<span class="theme-two">async def</span> <span class="theme-six">on_ready</span><span class="theme-three">()</span>:
+    print(f"Logged in as {bot.user}")
+
+<span class="theme-one">@bot.command()</span>
+<span class="theme-two">async def</span> <span class="theme-six">test</span><span class="theme-three">(ctx,</span><span class="theme-two">*</span><span class="theme-three">, par)</span>
+<span class="theme-two">await</span> <span class="theme-six">ctx</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">("You typed {0}"</span>,<span class="theme-six">format</span><span class="theme-three">(par))</span>
+
+#-------------------------------------------------------------
+
+<span class="theme-one">@bot.event</span>
+<span class="theme-two">async def</span> <span class="theme-six">on_message</span><span class="theme-three">(message)</span>:
+    <span class="theme-two">if</span> <span class="theme-six">message</span>.<span class="theme-six">author</span> <span class="theme-two">==</span> <span class="theme-six">bot.user</span>:
+        <span class="theme-two">return</span>
+
+    msg <span class="theme-two">=</span> <span class="theme-six">message</span>.<span class="theme-six">content</span>
+    <span class="theme-two">if</span> <span class="theme-six">any</span><span class="theme-three">(word</span> <span class="theme-two">in</span> <span class="theme-three">msg</span> <span class="theme-two">for</span> <span class="theme-three">word</span> <span class="theme-two">in</span> <span class="theme-seven">sad_words)</span>:
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">((starter_encouragements))</span>
+
+    <span class="theme-two">if</span> <span class="theme-six">any</span><span class="theme-three">(word</span> <span class="theme-two">in</span> <span class="theme-three">msg</span> <span class="theme-two">for</span> <span class="theme-three">word</span> <span class="theme-two">in</span> <span class="theme-seven">good_words)</span>:
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">(</span><span class="theme-six">random</span>.<span class="theme-six">choice</span><span class="theme-three">(happy_encouragements))</span>
+
+    <span class="theme-two">if</span> <span class="theme-six">message</span>.<span class="theme-six">content</span>.<span class="theme-six">startswith</span><span class="theme-three">('!hello')</span>:
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">('Hello!!!')</span>
+
+    <span class="theme-two">if</span> <span class="theme-six">message</span>.<span class="theme-six">content</span>.<span class="theme-six">startswith</span><span class="theme-three">('!inspire')</span>:
+        quote <span class="theme-two">=</span> <span class="theme-six">get_quote</span><span class="theme-three">()</span>
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">(quote)</span>
+
+    <span class="theme-two">if</span> <span class="theme-six">message</span>.<span class="theme-six">content</span>.<span class="theme-six">startswith</span><span class="theme-three">('!dog')</span>:
+        image_link <span class="theme-two">=</span> <span class="theme-six">get_dog</span><span class="theme-three">()</span>
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">(image_link)</span>
+
+    <span class="theme-two">if</span> <span class="theme-six">message</span>.<span class="theme-six">content</span>.<span class="theme-six">startswith</span><span class="theme-three">('!covid')</span>:
+        covid_text <span class="theme-two">=</span> <span class="theme-six">news_covid</span><span class="theme-three">()</span>
+        <span class="theme-two">await</span> <span class="theme-six">message</span>.<span class="theme-six">channel</span>.<span class="theme-six">send</span><span class="theme-three">(covid_text)</span>
+    
+    
+<span class="theme-six">bot</span>.<span class="theme-six">run</span><span class="theme-three">(</span><span class="theme-six">os</span>.<span class="theme-six">getenv</span><span class="theme-three">('TOKEN'))</span>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="left-side">
+            <h1>@Copyright Pongsapak, 2023.All right reserved.</h1>
+        </div>
+        <div class="right-side">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</body>
+</html>
